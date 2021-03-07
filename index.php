@@ -1,6 +1,8 @@
-<?php include "include/core.php"; ?>
+<?php include "core.html"; ?>
 
-<title>AME Ubiquiti Status Dashboard</title>
+<!doctype html>
+<html lang="en">
+
 
 <main class="container">
 
@@ -12,7 +14,6 @@
 </main><!-- /.container -->
 
 
+<?php include "footer.html"; ?>
 
-      
-  </body>
 </html>
