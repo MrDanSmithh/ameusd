@@ -7,10 +7,19 @@
 <main class="container">
 
   <div class="starter-template text-center py-5 px-3">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <h1>Welcome</h1>
+    <p class="lead">Choose an option below to get started.</p>
   </div>
+<div class="row align-items-start">
+<div class="col"><h5 class="homebtns">Analytics</h5></div>
 
+<div class="col"><h5 class="homebtns">Access Points</h5></div>
+
+<div class="col"><h5 class="homebtns">Blocked Devices</h5></div>
+
+<div class="col"><h5 class="homebtns">Switches</h5></div>
+
+</div>
 </main><!-- /.container -->
 
 

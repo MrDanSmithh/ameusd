@@ -6,3 +6,17 @@
 .bg-light {
 	background-color: #50a0d6!important;
 }
+
+.homebtns {
+  border-radius: 15px;
+  background: #a8aba3;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+  transition: transform .2s;
+  text-align: center;
+}
+
+.homebtns:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
