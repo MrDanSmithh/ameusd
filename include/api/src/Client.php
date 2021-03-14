@@ -23,12 +23,12 @@ class Client
      * private and protected properties
      */
     private $class_version             = '1.1.68';
-    protected $baseurl                 = 'https://127.0.0.1:8443';
+    protected $baseurl                 = 'https://192.168.100.253:8443';
     protected $user                    = '';
     protected $password                = '';
     protected $site                    = 'default';
-    protected $version                 = '6.0.43';
-    protected $debug                   = false;
+    protected $version                 = '6.0.45';
+    protected $debug                   = true;
     protected $curl_ssl_verify_peer    = false;
     protected $curl_ssl_verify_host    = false;
     protected $is_loggedin             = false;

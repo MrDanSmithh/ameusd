@@ -11,7 +11,7 @@
     <p class="lead">Choose an option below to get started.</p>
   </div>
 <div class="row align-items-start">
-<div class="col"><h5 class="homebtns"><img src="assets/images/graph-up.svg" style="width: 50%; margin-top: -5px">Analytics</h5></div>
+<div class="col"><a href="aps.php"><h5 class="homebtns"><img src="assets/images/graph-up.svg" style="width: 50%; margin-top: -5px">Analytics</h5></a></div>
 
 <div class="col"><h5 class="homebtns"><img src="assets/images/wifi.svg" style="width: 66%; margin-top: -20px">Access Points</h5></div>
 
