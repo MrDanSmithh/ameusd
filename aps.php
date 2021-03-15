@@ -36,7 +36,7 @@ foreach ($aps_array as $ap) {
     if ($ap->type === 'uap') { ?>
         <tbody>
         	<td><?php echo $ap->name;?></td> 
-        	<td><?php echo $ap->model;?></td>
+        	<td><?php echo $ap->ip;?></td>
         	<td><?php echo $ap->num_sta;?></td>
         	<?php
     }
