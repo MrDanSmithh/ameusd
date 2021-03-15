@@ -27,6 +27,7 @@ $aps_array        = $unifi_connection->list_devices();
       <th scope="col">AP Name</th>
       <th scope="col">IP Address</th>
       <th scope="col"># Connected Clients</th>
+      <th scope="col">Locate AP</th>
     </tr>
   </thead>
 
@@ -38,6 +39,7 @@ foreach ($aps_array as $ap) {
         	<td><?php echo $ap->name;?></td> 
         	<td><?php echo $ap->ip;?></td>
         	<td><?php echo $ap->num_sta;?></td>
+        	<td><button class="btn btn-info">Locate <?php $mac=$ap->mac; $unifi_connection->locate_ap($mac, false);?></button>
         	<?php
     }
 }
