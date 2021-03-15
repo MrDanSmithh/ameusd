@@ -19,11 +19,26 @@ $aps_array        = $unifi_connection->list_devices();
 
 /**
  * output the results in HTML format
- */
+ */ ?>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">AP Name</th>
+      <th scope="col">IP Address</th>
+      <th scope="col"># Connected Clients</th>
+    </tr>
+  </thead>
+
+<?php
 header('Content-Type: text/html; charset=utf-8');
 foreach ($aps_array as $ap) {
-    if ($ap->type === 'uap') {
-        echo '<b>AP name:</b>' . $ap->name . ' <b>model:</b>' . $ap->model . ' <b># connected clients:</b>' . $ap->num_sta . '<br>';
+    if ($ap->type === 'uap') { ?>
+        <tbody>
+        	<td><?php echo $ap->name;?></td> 
+        	<td><?php echo $ap->model;?></td>
+        	<td><?php echo $ap->num_sta;?></td>
+        	<?php
     }
 }
 ?>
