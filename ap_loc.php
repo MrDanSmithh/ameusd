@@ -43,7 +43,7 @@ foreach ($aps_array as $ap) {
         	<td><?php echo $ap->name;?></td> 
         	<td><?php echo $ap->ip;?></td>
         	<td><?php echo $ap->num_sta;?></td>
-        	<td><a class="btn btn-info" href="/ameusd/ap_loc.php">Locate <?php $mac=$ap->mac; $unifi_connection->locate_ap($mac, false);?></a>
+        	<td><a class="btn btn-danger" href="/ameusd/aps.php">Stop Locating <?php $mac=$ap->mac; $unifi_connection->locate_ap($mac, true);?></a>
 
         	<?php
     }
