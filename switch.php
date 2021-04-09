@@ -41,6 +41,7 @@ foreach ($data as $uswitch) {
 }
 echo json_encode($data);
 
+
 ?>
 <?php include "include/swports.php"; ?>
 <table class="table table-striped">
@@ -70,7 +71,7 @@ echo json_encode($data);
   <tr><td><?php echo $swPort15;?></td><td><?php echo $swPortPOE15;?></td><td><?php echo $swPortUP15;?></td></tr>
   <tr><td><?php echo $swPort16;?></td><td><?php echo $swPortPOE16;?></td><td><?php echo $swPortUP16;?></td></tr>
 
-
+<?php echo str_replace("false", "No", $data); ?>
 </tbody>
   </div>
 </main><!-- /.container -->
