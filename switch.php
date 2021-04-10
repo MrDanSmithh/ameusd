@@ -71,7 +71,6 @@ foreach ($data as $uswitch) {
   <tr><td><?php echo $swPort18;?></td><td><?php echo $swPortPOE18;?></td><td><?php echo $swPortUP18;?></td></tr>
 
 
-<?php echo str_replace("false", "No", $data); ?>
 </tbody>
   </div>
 </main><!-- /.container -->
