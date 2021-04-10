@@ -17,7 +17,7 @@ $set_debug_mode   = $unifi_connection->set_debug($debug);
 $loginresults     = $unifi_connection->login();
 $clientData       = $unifi_connection->list_clients();
 ?>
-<table class="table table-striped">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">Device Name</th>
@@ -38,11 +38,8 @@ foreach ($clientData as $userDevices) {
           <?php
     }
 }
-
-/**
- * output the results in JSON format
- */
-//echo json_encode($userDevices, JSON_PRETTY_PRINT); ?>  </div>
+?>
+</div>
 
 
 

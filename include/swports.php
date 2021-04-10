@@ -15,6 +15,8 @@ $swPort13 = json_encode($data[0]->port_table[12]->name);
 $swPort14 = json_encode($data[0]->port_table[13]->name);
 $swPort15 = json_encode($data[0]->port_table[14]->name);
 $swPort16 = json_encode($data[0]->port_table[15]->name);
+$swPort17 = json_encode($data[0]->port_table[16]->name);
+$swPort18 = json_encode($data[0]->port_table[17]->name);
 
 $swPortPOE1 = json_encode($data[0]->port_table[0]->poe_enable);
 $swPortPOE2 = json_encode($data[0]->port_table[1]->poe_enable);
@@ -32,6 +34,8 @@ $swPortPOE13 = json_encode($data[0]->port_table[12]->poe_enable);
 $swPortPOE14 = json_encode($data[0]->port_table[13]->poe_enable);
 $swPortPOE15 = json_encode($data[0]->port_table[14]->poe_enable);
 $swPortPOE16 = json_encode($data[0]->port_table[15]->poe_enable);
+$swPortPOE17 = json_encode($data[0]->port_table[16]->poe_enable);
+$swPortPOE18 = json_encode($data[0]->port_table[17]->poe_enable);
 
 $swPortUP1 = json_encode($data[0]->port_table[0]->is_uplink);
 $swPortUP2 = json_encode($data[0]->port_table[1]->is_uplink);
@@ -49,4 +53,6 @@ $swPortUP13 = json_encode($data[0]->port_table[12]->is_uplink);
 $swPortUP14 = json_encode($data[0]->port_table[13]->is_uplink);
 $swPortUP15 = json_encode($data[0]->port_table[14]->is_uplink);
 $swPortUP16 = json_encode($data[0]->port_table[15]->is_uplink);
+$swPortUP17 = json_encode($data[0]->port_table[16]->is_uplink);
+$swPortUP18 = json_encode($data[0]->port_table[17]->is_uplink);
 ?>

@@ -18,7 +18,7 @@ $set_debug_mode   = $unifi_connection->set_debug($debug);
 $loginresults     = $unifi_connection->login();
 $data             = $unifi_connection->list_devices();
 ?>
-<table class="table table-striped">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">Switch Name</th>
@@ -39,17 +39,14 @@ foreach ($data as $uswitch) {
           <?php
     }
 }
-echo json_encode($data);
-
 
 ?>
 <?php include "include/swports.php"; ?>
-<table class="table table-striped">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">Port</th>
       <th scope="col">PoE Active?</th>
-      <th scope="col">POE Voltage</th>
       <th scope="col">Is Uplink?</th>
     </tr>
   </thead>
@@ -70,6 +67,9 @@ echo json_encode($data);
   <tr><td><?php echo $swPort14;?></td><td><?php echo $swPortPOE14;?></td><td><?php echo $swPortUP14;?></td></tr>
   <tr><td><?php echo $swPort15;?></td><td><?php echo $swPortPOE15;?></td><td><?php echo $swPortUP15;?></td></tr>
   <tr><td><?php echo $swPort16;?></td><td><?php echo $swPortPOE16;?></td><td><?php echo $swPortUP16;?></td></tr>
+  <tr><td><?php echo $swPort17;?></td><td><?php echo $swPortPOE17;?></td><td><?php echo $swPortUP17;?></td></tr>
+  <tr><td><?php echo $swPort18;?></td><td><?php echo $swPortPOE18;?></td><td><?php echo $swPortUP18;?></td></tr>
+
 
 <?php echo str_replace("false", "No", $data); ?>
 </tbody>
