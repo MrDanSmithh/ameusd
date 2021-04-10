@@ -15,12 +15,35 @@
 $unifi_connection = new UniFi_API\Client($controlleruser, $controllerpassword, $controllerurl, $site_id, $controllerversion);
 $set_debug_mode   = $unifi_connection->set_debug($debug);
 $loginresults     = $unifi_connection->login();
-$clients_array    = $unifi_connection->list_clients();
+$clientData       = $unifi_connection->list_clients();
+?>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Device Name</th>
+      <th scope="col">SSID</th>
+      <th scope="col">IP</th>
+      <th scope="col">MAC Address</th>
+    </tr>
+  </thead>
+
+<?php
+foreach ($clientData as $userDevices) {
+    if ($userDevices->is_wired === false) { ?>
+          <tbody>
+          <td><?php echo $userDevices->hostname;?></td> 
+          <td><?php echo $userDevices->essid;?></td>
+          <td><?php echo $userDevices->ip;?></td>
+          <td><?php echo $userDevices->mac;?></td>
+          <?php
+    }
+}
 
 /**
  * output the results in JSON format
  */
-echo json_encode($clients_array, JSON_PRETTY_PRINT); ?>  </div>
+//echo json_encode($userDevices, JSON_PRETTY_PRINT); ?>  </div>
+
 
 
 <?php include "footer.html"; ?>
