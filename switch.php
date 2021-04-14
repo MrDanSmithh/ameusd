@@ -39,7 +39,6 @@ foreach ($data as $uswitch) {
           <?php
     }
 }
-
 ?>
 <?php include "include/swports.php"; ?>
 <table class="table table-hover">
