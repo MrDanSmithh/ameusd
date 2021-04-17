@@ -18,7 +18,6 @@ if (isset($_POST['password'])) {
 
 if (!$_SESSION['usdAUTH']): ?>
 
-<html><head><title>Login</title></head>
   <body>
    <div class="container text-center py-5 px-3">
     <h1>Welcome<h1>
