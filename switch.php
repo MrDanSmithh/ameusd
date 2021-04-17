@@ -24,6 +24,7 @@ $data             = $unifi_connection->list_devices();
   <thead>
     <tr>
       <th scope="col">Switch Name</th>
+      <th scope="col">Serial Number</th>
       <th scope="col">Model</th>
       <th scope="col">IP</th>
       <th scope="col">Locate Switch</th>
@@ -35,6 +36,7 @@ foreach ($data as $uswitch) {
     if ($uswitch->type === 'usw') { ?>
           <tbody>
           <td><?php echo $uswitch->name;?></td> 
+          <td><?php echo $uswitch->serial;?></td>
           <td><?php echo $uswitch->model;?></td>
           <td><?php echo $uswitch->ip;?></td>
           <td><a class="btn btn-info" href="/ameusd/sw_loc.php">Locate <?php $mac=$uswitch->mac; $unifi_connection->locate_ap($mac, false);?></a></td>

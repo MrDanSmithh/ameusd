@@ -24,25 +24,26 @@ $aps_array        = $unifi_connection->list_devices();
  * output the results in HTML format
  */ ?>
 
-<table class="table table-striped">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">AP Name</th>
+      <th scope="col">Serial Number</th>
       <th scope="col">IP Address</th>
       <th scope="col"># Connected Clients</th>
       <th scope="col">Locate AP</th>
     </tr>
   </thead>
 
+
 <?php
-
-
 
 header('Content-Type: text/html; charset=utf-8');
 foreach ($aps_array as $ap) {
     if ($ap->type === 'uap') { ?>
         <tbody>
         	<td><?php echo $ap->name;?></td> 
+          <td><?php echo $ap->serial;?></td>
         	<td><?php echo $ap->ip;?></td>
         	<td><?php echo $ap->num_sta;?></td>
         	<td><a class="btn btn-info" href="/ameusd/ap_loc.php">Locate <?php $mac=$ap->mac; $unifi_connection->locate_ap($mac, false);?></a>
