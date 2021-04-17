@@ -1,6 +1,7 @@
 <?php include "core.html"; ?>
 <?php include "include/unifiapi/src/config.php"; ?>
 <?php include "include/unifiapi/src/Client.php"; ?>
+<?php header("refresh: 15"); ?>
 <?php require_once('login.php'); ?>
 
 
