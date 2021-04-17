@@ -1,6 +1,8 @@
 <?php include "core.html"; ?>
 <?php include "include/unifiapi/src/config.php"; ?>
 <?php include "include/unifiapi/src/Client.php"; ?>
+<?php require_once('login.php'); ?>
+
 
 <!doctype html>
 <html lang="en">

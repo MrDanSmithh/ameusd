@@ -1,4 +1,6 @@
 <?php include "core.html"; ?>
+<?php require_once('login.php'); ?>
+
 
 <!doctype html>
 <html lang="en">
