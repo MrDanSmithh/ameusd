@@ -11,8 +11,27 @@
     <h1>Analytics</h1>
     <p class="lead">Information about usage on your network.</p>
 
+
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Internet Connection Usage (Past 7 days)
+      </button>
+    </h2>
+    	<p> This shows data transferred via the internet connection for the last 7 days, <strong>Tx</strong> is data sent and <strong>Rx</strong> is data received.
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      	    <div class="ratio ratio-21x9">
+<iframe src="http://192.168.100.252:3000/d-solo/WX6RJOMik/unifi-poller-usg-insights-influxdb?orgId=1&refresh=30s&from=1618101480980&to=1618706275980&panelId=3" width="450" height="200" frameborder="0"></iframe>
+</div>
+      </div>
+    </div>
+  </div>
+
+<br>
 <div class="ratio ratio-21x9">
-<iframe src="http://192.168.100.252:3000/d-solo/5_omrT7Zz/unifi-poller-network-sites-influxdb?orgId=1&from=1618687848912&to=1618698643912&panelId=15" width="450" height="200" frameborder="0"></iframe>
+<iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&from=1618102161628&to=1618706956628&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Identifier=$tag_name&panelId=12" width="450" height="200" frameborder="0"></iframe>
 </div>
 <?php include "footer.html"; ?>
 
