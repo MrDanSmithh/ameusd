@@ -23,15 +23,14 @@
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       	    <div class="ratio ratio-21x9">
-<iframe src="http://192.168.100.252:3000/d-solo/WX6RJOMik/unifi-poller-usg-insights-influxdb?orgId=1&refresh=30s&from=1618101480980&to=1618706275980&panelId=3" width="450" height="200" frameborder="0"></iframe>
-</div>
+<iframe src="http://192.168.100.252:3000/d-solo/WX6RJOMik/unifi-poller-usg-insights-influxdb?orgId=1&refresh=5m&from=now-7d&to=now&panelId=3" width="450" height="200" frameborder="0"></iframe></div>
       </div>
     </div>
   </div>
 
 <br>
 <div class="ratio ratio-21x9">
-<iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&from=1618102161628&to=1618706956628&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Identifier=$tag_name&panelId=12" width="450" height="200" frameborder="0"></iframe>
+<iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Identifier=$tag_name&panelId=12" width="450" height="200" frameborder="0"></iframe>
 </div>
 <?php include "footer.html"; ?>
 
