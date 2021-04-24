@@ -45,27 +45,45 @@
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+    <h2 class="accordion-header" id="wanGroupHeadingWk">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wanGroupsWk" aria-expanded="false" aria-controls="wanGroupsWk">
+        Traffic by Category
       </button>
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#analyticsAccordions">
+    <div id="wanGroupsWk" class="accordion-collapse collapse" aria-labelledby="wanGroupHeadingWk" data-bs-parent="#analyticsAccordions">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              	<p> This categorises the data transferred via the wireless network connection.</p>
+
+        <div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/AKIXQlsZz/unifi-poller-client-dpi-influxdb?orgId=1&refresh=5m&from=now-7d&to=now&panelId=5800" width="450" height="200" frameborder="0"></iframe>
       </div>
+    </div>
+  </div>
+</div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="wanGroupHeadingMth">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wanGroupsMth" aria-expanded="false" aria-controls="wanGroupsMth">
+        Device Types
+      </button>
+    </h2>
+    <div id="wanGroupsMth" class="accordion-collapse collapse" aria-labelledby="wanGroupHeadingMth" data-bs-parent="#analyticsAccordions">
+      <div class="accordion-body">
+              	<p> This categorises the types of devices present on the wireless network connection for the past 30 days.</p>
+<div class="ration ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Identifier=$tag_name&panelId=12" width="450" height="200" frameborder="0"></iframe>
+</div>
     </div>
   </div>
 </div>
 
 
 
+<iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&from=now - 7d&to=now&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Wired=All&var-Identifier=$tag_name&panelId=3" width="450" height="200" frameborder="0"></iframe>
 
 
 
 <br>
 <div class="ratio ratio-21x9">
-<iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Identifier=$tag_name&panelId=12" width="450" height="200" frameborder="0"></iframe>
+
 </div>
 <?php include "footer.html"; ?>
 
