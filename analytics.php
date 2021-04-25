@@ -44,6 +44,40 @@
       </div>
     </div>
   </div>
+
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="wifiBwdthHeadingWk">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wifiBwdthWk" aria-expanded="false" aria-controls="wifiBwdthWk">
+        Wireless Bandwidth (Past 7 Days)
+      </button>
+    </h2>
+    <div id="wifiBwdthWk" class="accordion-collapse collapse" aria-labelledby="wifiBwdthHeadingWk" data-bs-parent="#analyticsAccordions">
+      <div class="accordion-body">
+                <p> This shows wireless bandwidth usage for the last 7 days, <strong>Tx</strong> is data sent and <strong>Rx</strong> is data received.</p></p>
+<div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&from=now - 8d&to=now&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Wired=All&var-Identifier=$tag_name&panelId=3" width="450" height="200" frameborder="0"></iframe>
+</div>
+    </div>
+  </div>
+</div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="wifiBwdthHeadingMth">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wifiBwdthMth" aria-expanded="false" aria-controls="wifiBwdthMth">
+        Wireless Bandwidth (Past 30 Days)
+      </button>
+    </h2>
+    <div id="wifiBwdthMth" class="accordion-collapse collapse" aria-labelledby="wifiBwdthHeadingMth" data-bs-parent="#analyticsAccordions">
+      <div class="accordion-body">
+                <p> This shows wireless bandwidth usage for the last 30 days, <strong>Tx</strong> is data sent and <strong>Rx</strong> is data received.</p></p>
+<div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&from=now - 33d&to=now&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Wired=All&var-Identifier=$tag_name&panelId=3" width="450" height="200" frameborder="0"></iframe>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
   <div class="accordion-item">
     <h2 class="accordion-header" id="wanGroupHeadingWk">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wanGroupsWk" aria-expanded="false" aria-controls="wanGroupsWk">
@@ -69,21 +103,11 @@
     <div id="wanGroupsMth" class="accordion-collapse collapse" aria-labelledby="wanGroupHeadingMth" data-bs-parent="#analyticsAccordions">
       <div class="accordion-body">
               	<p> This categorises the types of devices present on the wireless network connection for the past 30 days.</p>
-<div class="ration ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Identifier=$tag_name&panelId=12" width="450" height="200" frameborder="0"></iframe>
+<div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Identifier=$tag_name&panelId=12" width="450" height="200" frameborder="0"></iframe>
 </div>
     </div>
   </div>
 </div>
-
-
-
-<iframe src="http://192.168.100.252:3000/d-solo/YVR23BZiz/unifi-poller-client-insights-influxdb?orgId=1&from=now - 7d&to=now&var-Controller=All&var-Site=All&var-AP=All&var-Wireless=All&var-Wired=All&var-Identifier=$tag_name&panelId=3" width="450" height="200" frameborder="0"></iframe>
-
-
-
-<br>
-<div class="ratio ratio-21x9">
-
 </div>
 <?php include "footer.html"; ?>
 
