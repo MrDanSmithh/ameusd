@@ -23,7 +23,7 @@
       <div class="accordion-body">
       	<p> This shows data transferred via the internet connection for the last 7 days, <strong>Tx</strong> is data sent and <strong>Rx</strong> is data received.</p>
 
-        <div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/WX6RJOMik/unifi-poller-usg-insights-influxdb?orgId=1&refresh=5m&from=now-7d&to=now&panelId=3" width="450" height="200" frameborder="0"></iframe>
+        <div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/WX6RJOMik/unifi-poller-usg-insights-influxdb?orgId=1&refresh=5m&from=now-8d&to=now&panelId=3" width="450" height="200" frameborder="0"></iframe>
 
         </div>
       </div>
@@ -39,7 +39,7 @@
       <div class="accordion-body">
               	<p> This shows data transferred via the internet connection for the last 30 days, <strong>Tx</strong> is data sent and <strong>Rx</strong> is data received.</p>
 
-        <div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/WX6RJOMik/unifi-poller-usg-insights-influxdb?orgId=1&refresh=5m&from=now-30d&to=now&panelId=3" width="450" height="200" frameborder="0"></iframe>
+        <div class="ratio ratio-21x9"><iframe src="http://192.168.100.252:3000/d-solo/WX6RJOMik/unifi-poller-usg-insights-influxdb?orgId=1&refresh=5m&from=now-33d&to=now&panelId=3" width="450" height="200" frameborder="0"></iframe>
         </div>
       </div>
     </div>
