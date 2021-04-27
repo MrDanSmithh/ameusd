@@ -17,7 +17,7 @@
 
 <div class="col"><h5 class="homebtns"><img src="assets/images/wifi.svg" style="width: 66%; margin-top: -20px">Access Points</h5></div>
 
-<div class="col"><h5 class="homebtns"><img src="assets/images/slash-circle.svg" style="width: 60%; margin-top: -10px">Blocked Devices</h5></div>
+<div class="col"><h5 class="homebtns"><img src="assets/images/people.svg" style="width: 62%; margin-top: -10px">Clients</h5></div>
 
 <div class="col"><h5 class="homebtns"><img src="assets/images/switch-rack.svg" style="width: 60%; margin-top: -10px">Switches</h5></div>
 
