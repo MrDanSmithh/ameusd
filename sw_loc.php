@@ -1,6 +1,8 @@
+<!-- Request core html, API and API config -->
 <?php include "core.html"; ?>
 <?php include "include/unifiapi/src/config.php"; ?>
 <?php include "include/unifiapi/src/Client.php"; ?>
+<!-- Present login page if not already logged in. -->
 <?php require_once('login.php'); ?>
 
 <!doctype html>
@@ -13,12 +15,15 @@
     <h1>Switches</h1>
     <p class="lead">Information about your switches.</p>
 
+<!-- Connect to API and make call to list devices -->
 <?php
 $unifi_connection = new UniFi_API\Client($controlleruser, $controllerpassword, $controllerurl, $site_id, $controllerversion);
 $set_debug_mode   = $unifi_connection->set_debug($debug);
 $loginresults     = $unifi_connection->login();
-$data             = $unifi_connection->list_devices();
+$swData           = $unifi_connection->list_devices();
 ?>
+
+<!-- Switch info table -->
 <table class="table table-hover">
   <thead>
     <tr>
@@ -30,21 +35,24 @@ $data             = $unifi_connection->list_devices();
     </tr>
   </thead>
 
+
+<!-- Loop each type of device as USW then echo data including name, serial, model and IP into the table rows -->
 <?php
-foreach ($data as $uswitch) {
+foreach ($swData as $uswitch) {
     if ($uswitch->type === 'usw') { ?>
           <tbody>
           <td><?php echo $uswitch->name;?></td> 
           <td><?php echo $uswitch->serial;?></td> 
           <td><?php echo $uswitch->model;?></td>
           <td><?php echo $uswitch->ip;?></td>
+          <!-- Start locate device based on MAC address and go back to original switch page when button clicked.-->
           <td><a class="btn btn-danger" href="/ameusd/switch.php">Stop Locating <?php $mac=$uswitch->mac; $unifi_connection->locate_ap($mac, true);?></a></td>
           <?php
     }
 }
 ?>
 
-
+<!-- Switch port information table, call data from the swports file -->
 <?php include "include/swports.php"; ?>
 <table class="table table-hover">
   <thead>
@@ -80,7 +88,7 @@ foreach ($data as $uswitch) {
   </div>
 </main><!-- /.container -->
 
-
+<!-- Close off and call footer -->
 <?php include "footer.html"; ?>
 
 </html>

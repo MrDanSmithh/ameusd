@@ -1,6 +1,9 @@
+<!-- Request core html, API and API config -->
 <?php include "core.html"; ?>
 <?php include "include/unifiapi/src/config.php"; ?>
 <?php include "include/unifiapi/src/Client.php"; ?>
+
+<!-- Refresh page every 15 seconds and present login page if not already logged in. -->
 <?php header("refresh: 15"); ?>
 <?php require_once('login.php'); ?>
 
@@ -15,12 +18,15 @@
     <h1>Switches</h1>
     <p class="lead">Information about your switches.</p>
 
+<!-- Connect to API and make call to list devices -->
 <?php
 $unifi_connection = new UniFi_API\Client($controlleruser, $controllerpassword, $controllerurl, $site_id, $controllerversion);
 $set_debug_mode   = $unifi_connection->set_debug($debug);
 $loginresults     = $unifi_connection->login();
-$data             = $unifi_connection->list_devices();
+$swData           = $unifi_connection->list_devices();
 ?>
+
+<!-- Switch info table -->
 <table class="table table-hover">
   <thead>
     <tr>
@@ -32,19 +38,23 @@ $data             = $unifi_connection->list_devices();
     </tr>
   </thead>
 
+<!-- Loop each type of device as USW then echo data including name, serial, model and IP into the table rows -->
 <?php
-foreach ($data as $uswitch) {
+foreach ($swData as $uswitch) {
     if ($uswitch->type === 'usw') { ?>
           <tbody>
           <td><?php echo $uswitch->name;?></td> 
           <td><?php echo $uswitch->serial;?></td>
           <td><?php echo $uswitch->model;?></td>
           <td><?php echo $uswitch->ip;?></td>
+          <!-- Trigger locate device based on MAC address when button clicked. -->
           <td><a class="btn btn-info" href="/ameusd/sw_loc.php">Locate <?php $mac=$uswitch->mac; $unifi_connection->locate_ap($mac, false);?></a></td>
           <?php
     }
 }
 ?>
+
+<!-- Switch port information table, call data from the swports file -->
 <?php include "include/swports.php"; ?>
 <table class="table table-hover">
   <thead>
@@ -55,6 +65,7 @@ foreach ($data as $uswitch) {
     </tr>
   </thead>
 <tbody>
+  <!-- Get info from each port array -->
   <tr><td><?php echo $swPort1;?></td><td><?php echo $swPortPOE1;?></td><td><?php echo $swPortUP1;?></td></tr>
   <tr><td><?php echo $swPort2;?></td><td><?php echo $swPortPOE2;?></td><td><?php echo $swPortUP2;?></td></tr>
   <tr><td><?php echo $swPort3;?></td><td><?php echo $swPortPOE3;?></td><td><?php echo $swPortUP3;?></td></tr>
@@ -79,6 +90,7 @@ foreach ($data as $uswitch) {
   </div>
 </main><!-- /.container -->
 
+<!-- Call footer -->
 
 <?php include "footer.html"; ?>
 

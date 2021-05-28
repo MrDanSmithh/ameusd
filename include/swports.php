@@ -1,4 +1,6 @@
 <?php
+
+// Locate switchport name from each array in table
 $swPort1 = $data[0]->port_table[0]->name;
 $swPort2 = $data[0]->port_table[1]->name;
 $swPort3 = $data[0]->port_table[2]->name;
@@ -18,6 +20,7 @@ $swPort16 = $data[0]->port_table[15]->name;
 $swPort17 = $data[0]->port_table[16]->name;
 $swPort18 = $data[0]->port_table[17]->name;
 
+// Check POE status of each switchport from each port array in table
 $swPortPOE1 = json_encode($data[0]->port_table[0]->poe_enable);
 $swPortPOE2 = json_encode($data[0]->port_table[1]->poe_enable);
 $swPortPOE3 = json_encode($data[0]->port_table[2]->poe_enable);
@@ -37,6 +40,8 @@ $swPortPOE16 = json_encode($data[0]->port_table[15]->poe_enable);
 $swPortPOE17 = json_encode($data[0]->port_table[16]->poe_enable);
 $swPortPOE18 = json_encode($data[0]->port_table[17]->poe_enable);
 
+
+// Check each port for uplink if it is true.
 $swPortUP1 = json_encode($data[0]->port_table[0]->is_uplink);
 $swPortUP2 = json_encode($data[0]->port_table[1]->is_uplink);
 $swPortUP3 = json_encode($data[0]->port_table[2]->is_uplink);

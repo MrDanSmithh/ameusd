@@ -3,11 +3,14 @@
 
 $dashPwd = '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684';
 
+
+// If session already open, do not require authentication.
 session_start();
 if (!isset($_SESSION['usdAUTH'])) {
     $_SESSION['usdAUTH'] = false;
 }
 
+// Validate password against SHA1 
 if (isset($_POST['password'])) {
     if (sha1($_POST['password']) == $dashPwd) {
         $_SESSION['usdAUTH'] = true;
@@ -16,6 +19,7 @@ if (isset($_POST['password'])) {
     }
 } 
 
+// Present login page if false
 if (!$_SESSION['usdAUTH']): ?>
 
   <body>
@@ -30,6 +34,7 @@ if (!$_SESSION['usdAUTH']): ?>
   </body>
 </html>
 
+<!-- Close off loop -->
 <?php
 exit();
 endif;

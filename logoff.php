@@ -1,5 +1,7 @@
+<!-- Request login code to check for session -->
 <?php include "core.html"; ?>
 <?php
+// Look at open session and destroy it -->
 session_start();
 session_destroy();
 ?>
